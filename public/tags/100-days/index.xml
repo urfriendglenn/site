@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>100-Days on Terminal</title>
-    <link>/tags/100-days/</link>
+    <link>//localhost:1313/tags/100-days/</link>
     <description>Recent content in 100-Days on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="/tags/100-days/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="//localhost:1313/tags/100-days/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Day0</title>
-      <link>/100-days/day0/</link>
+      <link>//localhost:1313/100-days/day0/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>/100-days/day0/</guid>
+      <guid>//localhost:1313/100-days/day0/</guid>
       <description>100 Days Of Code - Log Day 0: March 2,2024 Today&amp;rsquo;s Progress: Created base site framework.
 Thoughts: Going to work on editing the theme and removing unnecessary elements.
 Link(s) to work:</description>
