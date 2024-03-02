@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Terminal</title>
+    <link>/tags/about/</link>
+    <description>Recent content in About on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>/about/about/</link>
+      <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description>My name is Glenn Lewis I&amp;rsquo;m a DevOps Engineer.</description>
+      <content>&lt;h1 id=&#34;my-name-is-glenn-lewis&#34;&gt;My name is Glenn Lewis&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m a DevOps Engineer.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
