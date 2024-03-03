@@ -18,4 +18,6 @@ I'm a DevOps Engineer.
 
 I currently live in Austin, TX with my wife and dog.
 
-I am going to sue this site to track my 100 days of code and as a technical blog.
+I play guitar and run.
+
+Feel free to [reach out](mailto:glelewis90@gmail.com).

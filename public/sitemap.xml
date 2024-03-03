@@ -2,45 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/tags/100-days/</loc>
+    <loc>/tags/100-days/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/100-days/</loc>
+    <loc>/100-days/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/about/</loc>
+    <loc>/tags/about/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/about/about/</loc>
+    <loc>/about/about/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/blog/</loc>
+    <loc>/tags/blog/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/day0/</loc>
+    <loc>/tags/day0/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/100-days/day0/</loc>
+    <loc>/100-days/day0/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/first-thoughts/</loc>
+    <loc>/posts/first/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/my-first-post/</loc>
+    <loc>/tags/first-thoughts/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>/</loc>
     <lastmod>2024-03-02T09:47:58-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
   </url>
 </urlset>

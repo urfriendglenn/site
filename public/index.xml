@@ -2,33 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terminal</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>//localhost:1313/about/about/</link>
+      <link>/about/about/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>//localhost:1313/about/about/</guid>
+      <guid>/about/about/</guid>
       <description>My name is Glenn Lewis I&amp;rsquo;m a DevOps Engineer.
 I currently live in Austin, TX with my wife and dog.
-I am going to sue this site to track my 100 days of code and as a technical blog.</description>
+I play guitar and run.
+Feel free to reach out.</description>
       <content>&lt;h1 id=&#34;my-name-is-glenn-lewis&#34;&gt;My name is Glenn Lewis&lt;/h1&gt;
 &lt;p&gt;I&amp;rsquo;m a DevOps Engineer.&lt;/p&gt;
 &lt;p&gt;I currently live in Austin, TX with my wife and dog.&lt;/p&gt;
-&lt;p&gt;I am going to sue this site to track my 100 days of code and as a technical blog.&lt;/p&gt;
+&lt;p&gt;I play guitar and run.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;a href=&#34;mailto:glelewis90@gmail.com&#34;&gt;reach out&lt;/a&gt;.&lt;/p&gt;
 </content>
     </item>
     
     <item>
       <title>Day0</title>
-      <link>//localhost:1313/100-days/day0/</link>
+      <link>/100-days/day0/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>//localhost:1313/100-days/day0/</guid>
+      <guid>/100-days/day0/</guid>
       <description>100 Days Of Code - Log Day 0: March 2,2024 Today&amp;rsquo;s Progress: Created base site framework.
 Thoughts: Going to work on editing the theme and removing unnecessary elements.
 Link(s) to work:</description>
@@ -41,14 +43,16 @@ Link(s) to work:</description>
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>//localhost:1313/posts/my-first-post/</link>
+      <title>First</title>
+      <link>/posts/first/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>//localhost:1313/posts/my-first-post/</guid>
-      <description>It Begins This is my first post. I will edit this post</description>
+      <guid>/posts/first/</guid>
+      <description>It Begins A journey of a thousand miles starts with a single step, and this site is mine. I&amp;rsquo;m Glenn Lewis, and I have been working in tech for 10 years. During that time, I’ve become adept at Linux administration, Python scripting, Incident Management, and System Observability. Like most people who haven’t gone through a typical education path, my knowledge had been built through hands-on experience and tribal knowledge.
+What I would like to do with this site is track my continuing journey in software development and share my experience.</description>
       <content>&lt;h1 id=&#34;it-begins&#34;&gt;It Begins&lt;/h1&gt;
-&lt;p&gt;This is my first post. I will edit this post&lt;/p&gt;
+&lt;p&gt;A journey of a thousand miles starts with a single step, and this site is mine. I&amp;rsquo;m Glenn Lewis, and I have been working in tech for 10 years. During that time, I’ve become adept at Linux administration, Python scripting, Incident Management, and System Observability. Like most people who haven’t gone through a typical education path, my knowledge had been built through hands-on experience and tribal knowledge.&lt;/p&gt;
+&lt;p&gt;What I would like to do with this site is track my continuing journey in software development and share my experience. I hope to share resources, pitfalls, and advice that others might find useful. Ellen Ulman once said “Programmers seem to be changing the world. It would be a relief, for them and for all of us, if they knew something about it,” and that is what I intend to do.&lt;/p&gt;
 </content>
     </item>
     
