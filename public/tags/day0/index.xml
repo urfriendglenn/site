@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Day0 on Terminal</title>
-    <link>/tags/day0/</link>
+    <link>glennlewis.me/tags/day0/</link>
     <description>Recent content in Day0 on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="/tags/day0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="glennlewis.me/tags/day0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Day0</title>
-      <link>/100-days/day0/</link>
+      <link>glennlewis.me/100-days/day0/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>/100-days/day0/</guid>
+      <guid>glennlewis.me/100-days/day0/</guid>
       <description>100 Days Of Code - Log Day 0: March 2,2024 Today&amp;rsquo;s Progress: Created base site framework.
 Thoughts: Going to work on editing the theme and removing unnecessary elements.
-Link(s) to work:</description>
+Link to work</description>
       <content>&lt;h1 id=&#34;100-days-of-code---log&#34;&gt;100 Days Of Code - Log&lt;/h1&gt;
 &lt;h3 id=&#34;day-0-march-22024&#34;&gt;Day 0: March 2,2024&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Today&amp;rsquo;s Progress&lt;/strong&gt;: Created base site framework.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Thoughts&lt;/strong&gt;: Going to work on editing the theme and removing unnecessary elements.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Link(s) to work&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/urfriendglenn/site&#34;&gt;Link to work&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </content>
     </item>
     

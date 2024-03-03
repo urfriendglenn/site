@@ -20,4 +20,4 @@ color = "" #color from the theme settings
 
 **Thoughts**: Going to work on editing the theme and removing unnecessary elements.
 
-**Link(s) to work**: 
+**[Link to work](https://github.com/urfriendglenn/site)**

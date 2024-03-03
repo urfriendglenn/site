@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terminal</title>
-    <link>/</link>
+    <link>glennlewis.me/</link>
     <description>Recent content on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="glennlewis.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>/about/about/</link>
+      <link>glennlewis.me/about/about/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>/about/about/</guid>
+      <guid>glennlewis.me/about/about/</guid>
       <description>My name is Glenn Lewis I&amp;rsquo;m a DevOps Engineer.
 I currently live in Austin, TX with my wife and dog.
 I play guitar and run.
@@ -27,27 +27,27 @@ Feel free to reach out.</description>
     
     <item>
       <title>Day0</title>
-      <link>/100-days/day0/</link>
+      <link>glennlewis.me/100-days/day0/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>/100-days/day0/</guid>
+      <guid>glennlewis.me/100-days/day0/</guid>
       <description>100 Days Of Code - Log Day 0: March 2,2024 Today&amp;rsquo;s Progress: Created base site framework.
 Thoughts: Going to work on editing the theme and removing unnecessary elements.
-Link(s) to work:</description>
+Link to work</description>
       <content>&lt;h1 id=&#34;100-days-of-code---log&#34;&gt;100 Days Of Code - Log&lt;/h1&gt;
 &lt;h3 id=&#34;day-0-march-22024&#34;&gt;Day 0: March 2,2024&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Today&amp;rsquo;s Progress&lt;/strong&gt;: Created base site framework.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Thoughts&lt;/strong&gt;: Going to work on editing the theme and removing unnecessary elements.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Link(s) to work&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/urfriendglenn/site&#34;&gt;Link to work&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </content>
     </item>
     
     <item>
       <title>First</title>
-      <link>/posts/first/</link>
+      <link>glennlewis.me/posts/first/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>/posts/first/</guid>
+      <guid>glennlewis.me/posts/first/</guid>
       <description>It Begins A journey of a thousand miles starts with a single step, and this site is mine. I&amp;rsquo;m Glenn Lewis, and I have been working in tech for 10 years. During that time, I’ve become adept at Linux administration, Python scripting, Incident Management, and System Observability. Like most people who haven’t gone through a typical education path, my knowledge had been built through hands-on experience and tribal knowledge.
 What I would like to do with this site is track my continuing journey in software development and share my experience.</description>
       <content>&lt;h1 id=&#34;it-begins&#34;&gt;It Begins&lt;/h1&gt;

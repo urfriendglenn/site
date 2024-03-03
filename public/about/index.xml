@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Terminal</title>
-    <link>/about/</link>
+    <link>glennlewis.me/about/</link>
     <description>Recent content in Abouts on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 09:47:58 -0600</lastBuildDate><atom:link href="glennlewis.me/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>/about/about/</link>
+      <link>glennlewis.me/about/about/</link>
       <pubDate>Sat, 02 Mar 2024 09:47:58 -0600</pubDate>
       
-      <guid>/about/about/</guid>
+      <guid>glennlewis.me/about/about/</guid>
       <description>My name is Glenn Lewis I&amp;rsquo;m a DevOps Engineer.
 I currently live in Austin, TX with my wife and dog.
 I play guitar and run.
