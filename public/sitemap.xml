@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>glennlewis.me/tags/100-days/</loc>
-    <lastmod>2024-03-03T09:47:58-06:00</lastmod>
-  </url><url>
     <loc>glennlewis.me/100-days/</loc>
+    <lastmod>2024-03-04T21:03:56-06:00</lastmod>
+  </url><url>
+    <loc>glennlewis.me/100-days/day2/</loc>
+    <lastmod>2024-03-04T21:03:56-06:00</lastmod>
+  </url><url>
+    <loc>glennlewis.me/</loc>
+    <lastmod>2024-03-04T21:03:56-06:00</lastmod>
+  </url><url>
+    <loc>glennlewis.me/tags/100-days/</loc>
     <lastmod>2024-03-03T09:47:58-06:00</lastmod>
   </url><url>
     <loc>glennlewis.me/tags/day1/</loc>
@@ -15,9 +21,6 @@
     <lastmod>2024-03-03T09:47:58-06:00</lastmod>
   </url><url>
     <loc>glennlewis.me/tags/</loc>
-    <lastmod>2024-03-03T09:47:58-06:00</lastmod>
-  </url><url>
-    <loc>glennlewis.me/</loc>
     <lastmod>2024-03-03T09:47:58-06:00</lastmod>
   </url><url>
     <loc>glennlewis.me/tags/about/</loc>
