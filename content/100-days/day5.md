@@ -12,7 +12,7 @@ readingTime = false
 hideComments = false
 color = "" #color from the theme settings
 +++
-### Day 4: March 7, 2024
+### Day 5: March 7, 2024
 
 **Today's Progress**: Added formatting to task listing on homepage, fixed priority values, and fixed date display.
 
