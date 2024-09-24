@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Terminal</title>
-    <link>/posts/</link>
+    <link>//localhost:1313/posts/</link>
     <description>Recent content in Posts on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Sep 2024 16:15:05 -0500</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Sep 2024 16:15:05 -0500</lastBuildDate><atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome</title>
-      <link>/posts/welcome/</link>
+      <link>//localhost:1313/posts/welcome/</link>
       <pubDate>Mon, 23 Sep 2024 16:15:05 -0500</pubDate>
       
-      <guid>/posts/welcome/</guid>
+      <guid>//localhost:1313/posts/welcome/</guid>
       <description>It Begins A journey of a thousand miles starts with a single step, and this site is mine. I’m Glenn Lewis, and I have been working in tech for 10 years. During that time, I’ve become adept at Linux administration, Python scripting, Incident Management, and System Observability. Like most people who haven’t gone through a typical education path, my knowledge had been built through hands-on experience and tribal knowledge.
 What I would like to do with this site is track my continuing journey in software development and share my experience.</description>
       <content>&lt;h1 id=&#34;it-begins&#34;&gt;It Begins&lt;/h1&gt;
