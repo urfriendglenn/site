@@ -2,17 +2,342 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Terminal</title>
-    <link>//localhost:1313/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Sep 2024 16:15:05 -0500</lastBuildDate><atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Sep 2024 19:44:48 -0500</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certified Kubernetes Administrator: Core Concepts</title>
+      <link>/posts/cka_2/</link>
+      <pubDate>Mon, 23 Sep 2024 19:44:48 -0500</pubDate>
+      
+      <guid>/posts/cka_2/</guid>
+      <description>Cluster Architecture Control Plane Master Node: Manage, Plan, Schedule, and Monitor Nodes ETCD Cluster: Highly available key/value database kube-scheduler: Identifies the right node to place a container on Node-Controller: Manages nodes Replication-Controller: Ensures desired number of containers are running in a replication group kube-apiserver: Orchestrates all operations within the cluster and exposes the API
+Workers Worker Nodes: Host applications as Containers A container runtime engine, like Docker, must be installed and available on all nodes kubelet: Agent that runs on each node in a cluster and listens for instructions from the API as well as monitors status of all the other nodes kube-proxy: Service ensures that the rules are in place on the worker nodes so the containers can communicate between each other</description>
+      <content>&lt;h1 id=&#34;cluster-architecture&#34;&gt;Cluster Architecture&lt;/h1&gt;
+&lt;h2 id=&#34;control-plane&#34;&gt;Control Plane&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Master Node&lt;/strong&gt;: Manage, Plan, Schedule, and Monitor Nodes
+&lt;strong&gt;ETCD Cluster&lt;/strong&gt;: Highly available key/value database
+&lt;strong&gt;kube-scheduler&lt;/strong&gt;: Identifies the right node to place a container on
+&lt;strong&gt;Node-Controller&lt;/strong&gt;: Manages nodes
+&lt;strong&gt;Replication-Controller&lt;/strong&gt;: Ensures desired number of containers are running in a replication group
+&lt;strong&gt;kube-apiserver&lt;/strong&gt;: Orchestrates all operations within the cluster and exposes the API&lt;/p&gt;
+&lt;h2 id=&#34;workers&#34;&gt;Workers&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Worker Nodes&lt;/strong&gt;: Host applications as Containers
+A container runtime engine, like Docker, must be installed and available on all nodes
+&lt;strong&gt;kubelet&lt;/strong&gt;: Agent that runs on each node in a cluster and listens for instructions from the API as well as monitors status of all the other nodes
+&lt;strong&gt;kube-proxy&lt;/strong&gt;: Service ensures that the rules are in place on the worker nodes so the containers can communicate between each other&lt;/p&gt;
+&lt;h1 id=&#34;docker-vs-containerd&#34;&gt;Docker vs. Containerd&lt;/h1&gt;
+&lt;p&gt;Docker support was removed from Kubernetes, but Docker images still work because they adhere to imagespec
+&lt;strong&gt;containerd&lt;/strong&gt;: Container runtime used by Docker that can be ran by itself
+&lt;code&gt;ctr&lt;/code&gt;: Debugging tool bundled with containerd
+&lt;code&gt;nerdctl&lt;/code&gt;: Provides a Docker-like for containerd
+Supports docker compose
+Supports newest features in containerd
+&lt;code&gt;crictl&lt;/code&gt;: Provides a CLI for Container Runtime Interface (CRI) compatible container runtimes
+Installed separately
+Used to inspect and debug container runtimes
+Works across different runtimes&lt;/p&gt;
+&lt;h1 id=&#34;etcd-for-beginners&#34;&gt;ETCD for Beginners&lt;/h1&gt;
+&lt;p&gt;ETCD is a distributed reliable key-value store
+&lt;strong&gt;Key-Value Store&lt;/strong&gt;: Stores information as documents and all information on an item is contained in the corresponding document
+To install ETCD, download and extract the binary then run the service
+It will run on port 2379 and clients can be attached
+&lt;code&gt;etcdctl&lt;/code&gt;: Command client
+&lt;code&gt;etcdctl put key1 value1&lt;/code&gt;: Sets a key
+&lt;code&gt;ectdctl get key1&lt;/code&gt;: Gets a key value&lt;/p&gt;
+&lt;h1 id=&#34;etcd-in-kubernetes&#34;&gt;ETCD in Kubernetes&lt;/h1&gt;
+&lt;p&gt;Stores information on the Nodes, PODs, Configs, Secrets, etc.
+All changes are updated in the ETCD server, and is not considered completed until changed&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;h3 id=&#34;manual&#34;&gt;Manual&lt;/h3&gt;
+&lt;p&gt;The binary is downloaded, then manually set as a service by executing the &lt;code&gt;etcd&lt;/code&gt; command with the required options&lt;/p&gt;
+&lt;h2 id=&#34;kubeadm&#34;&gt;kubeadm&lt;/h2&gt;
+&lt;p&gt;ETCD is deployed as a pod in the clusted
+&lt;code&gt;kubectl exec etcd-master -n kube-system etcdctl get / --prefic -keys-only&lt;/code&gt;: Get keys stored in the ETCD pod&lt;/p&gt;
+&lt;p&gt;In a HA Environment, there are multiple ETCD masters&lt;/p&gt;
+&lt;h1 id=&#34;kube-api-server&#34;&gt;Kube-API Server&lt;/h1&gt;
+&lt;p&gt;When running a command, it is sent to the kube-apiserver
+POST requests can also be sent in place of commands:
+&lt;code&gt;curl -X POST /api/v1/namespaces/default/pods ...&lt;/code&gt;: Creates a Pod
+The scheduler detects there is a pod with no node assigned, then chooses a pod and communicates to the kube-apiserver
+The apiserver instructs the kubelet to create a pod
+The kubelet communicates the change to the apiserver, which updates ETCD&lt;/p&gt;
+&lt;h1 id=&#34;kube-controller-manager&#34;&gt;Kube Controller Manager&lt;/h1&gt;
+&lt;p&gt;A controller is a process that continuously monitors the system and takes necessary actions to keep the system in a specified state
+&lt;strong&gt;Node Controller&lt;/strong&gt;: Responsible for monitoring the status of the nodes and takes action to keep applications running
+Checks status every 5 second
+After 40 seconds of no heartbeat, a node is marked unreachable
+After 5 minutes, the node is evicted and pods are moved to healthy nodes
+&lt;strong&gt;Replication Controller&lt;/strong&gt;: Responsible for monitoring the status of replicasets and ensures the number of pods are available within a set
+If a pod dies, it creates another pod
+There are many types of controllers in a Kubernetes Cluster, and are all packaged in the &lt;strong&gt;Kube-Controller-Manager&lt;/strong&gt;
+kubeadm deploys the kube-controller-manager as a pod&lt;/p&gt;
+&lt;h1 id=&#34;kube-scheduler&#34;&gt;Kube Scheduler&lt;/h1&gt;
+&lt;p&gt;Responsible which pod goes on which node
+Does not actually place the pod, the kubelet does
+The scheduler looks at each pod and finds the correct node for it based on requirements (CPU, Memory, Labels, etc.)
+The scheduler ranks the nodes and assigns on a rank from 0-10
+kubeadm deploys the scheduler as a pod&lt;/p&gt;
+&lt;h1 id=&#34;kubelet&#34;&gt;Kubelet&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Registers nodes&lt;/li&gt;
+&lt;li&gt;Creates pods&lt;/li&gt;
+&lt;li&gt;Monitors nodes and pods
+The kubelet service is not installed by kubeadm and must be manually installed on each node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;kube-proxy&#34;&gt;Kube Proxy&lt;/h1&gt;
+&lt;p&gt;Every pod can reach every pod
+A pod network is an internal network each pod communicates with
+Applications are deployed as services so they can be available to the cluster
+The service has an assigned IP
+&lt;strong&gt;kube-proxy&lt;/strong&gt;: Process that runs on each that looks for new services, then creates the appropriate rules to route traffic through the pods
+kubeadm deploys kube-proxy as a pod&lt;/p&gt;
+&lt;h1 id=&#34;pods&#34;&gt;Pods&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Pod&lt;/strong&gt;: A single instance of an application and is the smallest object that can be created in Kubernetes
+Containers are not added to existing pods to scale
+Pods can container multiple containers, but the containers are not of the same image
+&lt;code&gt;kubectl run nginx --image nginx&lt;/code&gt;: Deploys a docker container by creating a pod using the NGINX Docker Image
+&lt;code&gt;kubectl get pods&lt;/code&gt;: Lists Pods&lt;/p&gt;
+&lt;h1 id=&#34;pods-with-yaml&#34;&gt;Pods with YAML&lt;/h1&gt;
+&lt;p&gt;Kubernetes uses YAML files as inputs for creation of objects
+A Kubernetes definition file always contains the following four top-level fields:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: Pod
+metadata:
+	name: myapp-prod
+	labels:
+		app: myapp
+		type: front-end
+spec:
+	containers:
+		- name: nginx-container
+		- image: nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;apiVersion&lt;/code&gt;: The version of the API the object will be created with&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kind&lt;/code&gt;: Type of object being created&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;metadata&lt;/code&gt;: Data about the object in the form of a dictionary&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spec&lt;/code&gt;: Specifications pertaining to the object
+&lt;code&gt;kubectl create -f pod-definition.yml&lt;/code&gt;: Creates the object listed in the specified file
+&lt;code&gt;kubectl describe pod myapp-pod&lt;/code&gt;: Lists information on the specified pod&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;replicasets&#34;&gt;ReplicaSets&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Replication Controller&lt;/strong&gt;: Runs multiple instances of a single Pod in a cluster
+A replication controller also brings up new pods when a pod fails and ensures the necessary number of pods are running
+Replication assists with load balancing and scaling by deploying multiple nodes in the cluster across nodes
+&lt;strong&gt;ReplicaSet&lt;/strong&gt;: New recommended utility to manage replication
+To create a replication controller:
+&lt;code&gt;rc-definition.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: ReplicationController
+metadata:
+	name: myapp-rc
+	labels:
+		app: myapp
+		type: front-end
+spec:
+	template:
+		metadata:
+			name: myapp-prod
+			labels:
+				app: myapp
+				type: front-end
+	spec:
+		containers:
+		- name: nginx-container
+	      image: nginx
+	replicas: 3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;template&lt;/code&gt;: Pod template to be created by the replication controller, which will contain the contents of a Pod YAML file
+&lt;code&gt;kubectl create -f rc-definition.yml&lt;/code&gt;: Creates the replication controller
+&lt;code&gt;kubectl get replicationcontroller&lt;/code&gt;: Lists replication controller&lt;/p&gt;
+&lt;p&gt;To create a replicaset:
+&lt;code&gt;replicaset-definition.yml&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+	name: myapp-replicaset
+	labels:
+		app: myapp
+		type: front-end
+spec:
+	template:
+		metadata:
+			name: myapp-prod
+			labels:
+				app: myapp
+				type: front-end
+	spec:
+		containers:
+		- name: nginx-container
+	      image: nginx
+	replicas: 3
+	selector:
+		matchLabels:
+			type: front-end
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;selector&lt;/code&gt;: Identifies applicable pods, as ReplicaSets can manage pods that were not created by it. It is not a required field
+&lt;code&gt;kubectl create -f replicaset-definition.yml&lt;/code&gt;: Creates the replicaset
+&lt;code&gt;kubectl get replicaset&lt;/code&gt;: Lists replicasets
+ReplicaSets can begin monitoring existing pods upon creation if said pods match the selector criteria
+&lt;code&gt;kubectl delete replicaset myapp-replicaset&lt;/code&gt;: Deletes the specified replicaset and the underlying pods&lt;/p&gt;
+&lt;h2 id=&#34;scale&#34;&gt;Scale&lt;/h2&gt;
+&lt;p&gt;To scale:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Manually edit the &lt;code&gt;replicas&lt;/code&gt; value in the definition file&lt;/li&gt;
+&lt;li&gt;Use the &lt;code&gt;kubectl scale --replicas=6 -f replicaset-definition.yml&lt;/code&gt; command&lt;/li&gt;
+&lt;li&gt;Use the &lt;code&gt;kubectl scale --replicas=6 replicaset myapp-replicaset&lt;/code&gt; command&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;deployments&#34;&gt;Deployments&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Rolling Updates&lt;/strong&gt;: Updating pods one by one to limit impact to accessibility
+&lt;strong&gt;Deployment&lt;/strong&gt;: Object that provides capability to upgrade with rolling updates, as well pause, and resume changes
+&lt;code&gt;deployment-definition.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: apps/v1
+kind: Deployment
+metadata:
+	name: myapp-deployment
+	labels:
+		app: myapp
+		type: front-end
+spec:
+	template:
+		metadata:
+			name: myapp-prod
+			labels:
+				app: myapp
+				type: front-end
+	spec:
+		containers:
+		- name: nginx-container
+	      image: nginx
+	replicas: 3
+	selector:
+		matchLabels:
+			type: front-end
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;kubectl create -f deployment-definition.yml&lt;/code&gt;: Creates the deployment
+&lt;code&gt;kubectl get deployments&lt;/code&gt;: Lists deployments
+&lt;code&gt;kubectl get all&lt;/code&gt;: Shows all objects created&lt;/p&gt;
+&lt;h1 id=&#34;services-node-port&#34;&gt;Services: Node Port&lt;/h1&gt;
+&lt;p&gt;Services enable connectivity between groups of pods and external sources
+Services are deployed as an object
+&lt;strong&gt;Node Port Service&lt;/strong&gt;: Listens to a port on the node and forward requests to a port running on the application
+&lt;strong&gt;Target Port&lt;/strong&gt;: Port on the pod that requests are forwarded to
+&lt;strong&gt;Port&lt;/strong&gt;: The port on the service
+&lt;strong&gt;Node Port&lt;/strong&gt;: Physical port on the Node that ranges from 30008-32767
+&lt;strong&gt;Cluster IP&lt;/strong&gt;: Virtual IP inside the cluster to allow communication between different services
+&lt;strong&gt;LoadBalancer&lt;/strong&gt;: Distributes load based on set requirements
+&lt;code&gt;service-definition.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+	name: myapp-service
+	
+spec:
+	type: NodePort
+	ports:
+		- targetPort: 80
+		port: 80
+		nodePort: 30008
+	selector:
+		app: myapp
+		type: front-end
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;selector&lt;/code&gt;: Selects the applicable pods based on labels
+The service will be applied to all pods with the label &lt;code&gt;app: myapp&lt;/code&gt;
+&lt;code&gt;kubectl get services&lt;/code&gt;: Lists services&lt;/p&gt;
+&lt;h1 id=&#34;services-cluster-ip&#34;&gt;Services: Cluster IP&lt;/h1&gt;
+&lt;p&gt;Pods are assigned non-static IP addresses when created
+A service can group like pods together and provide a single interface for access purposes
+&lt;code&gt;service-definition.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+	name: back-end
+	
+spec:
+	type: ClusterIP
+	ports:
+		- targetPort: 80
+		port: 80
+	selector:
+		app: myapp
+		type: back-end
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;services-loadbalancer&#34;&gt;Services: LoadBalancer&lt;/h1&gt;
+&lt;p&gt;Kubernetes supports integration with cloud provider LoadBalancers
+Uses the same format as &lt;code&gt;NodePort&lt;/code&gt; YAML files, except type is set to &lt;code&gt;LoadBalancer&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+	name: myapp-service
+	
+spec:
+	type: LoadBalancer
+	ports:
+		- targetPort: 80
+		port: 80
+		nodePort: 30008
+	selector:
+		app: myapp
+		type: front-end
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;namespaces&#34;&gt;Namespaces&lt;/h1&gt;
+&lt;p&gt;Objects are created in the &lt;code&gt;default&lt;/code&gt; namespace that was made available during the creation of the cluster
+Another namespace called &lt;code&gt;kubesystem&lt;/code&gt; was also created for internal services
+A third namespace, &lt;code&gt;kubepublic&lt;/code&gt;, was created in which resources meant to made public to users are held
+Resources can be isolated in namespaces, i.e. Development vs. Production
+Resources within the same namespace can reach other by the object name:
+&lt;code&gt;mysql.connect(&amp;quot;db-service)&lt;/code&gt;
+To reach a service within another namespace, the name of the namespace needs to be appended to the service:
+&lt;code&gt;mysql.connect(&amp;quot;db-service.dev.svc.cluster.local&amp;quot;)&lt;/code&gt;
+When the service was created, a DNS entry was created in this format:
+&lt;code&gt;db-service&lt;/code&gt;: Sevice Name
+&lt;code&gt;dev&lt;/code&gt;: Namespace
+&lt;code&gt;svc&lt;/code&gt;: Service
+&lt;code&gt;cluster.local&lt;/code&gt;: Domain
+&lt;code&gt;kubectl get pods -n [namespace]&lt;/code&gt;: List pods in a specified namespace
+&lt;code&gt;kubectle create -f definition.yml --namespace=[namespace]&lt;/code&gt;: Creates the object in the specified namespace
+The namespace can be applied in the &lt;code&gt;metadata&lt;/code&gt; section of a definition YAML file:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: Pod
+metadata:
+	name: myapp-prod
+	namespace: dev
+	labels:
+		app: myapp
+		type: front-end
+spe
+	containers:
+		- name: nginx-container
+		- image: nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To create a new namespace:
+&lt;code&gt;namespace-dev.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: Namespace
+metadata:
+	name: dev
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A namespace can also be created with &lt;code&gt;kubectl create namespace dev&lt;/code&gt;
+To set the default namespace &lt;code&gt;kubectl&lt;/code&gt; reads from:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kubectl config set-context $(kubectl config current-context) --namespace=namespace
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To limit resources in a namespace, create a Resource Quota:
+&lt;code&gt;compute-quota.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: ResourceQuota
+metadata:
+	name: compute-quota
+	namespace: dev
+spec:
+	hard:
+		pods: &amp;#34;10&amp;#34;
+		requests.cpu: &amp;#34;4&amp;#34;
+		requests.memory: 5Gi
+		limits.cpu: &amp;#34;10&amp;#34;
+		limits.memory: 10Gi
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
     <item>
       <title>Welcome</title>
-      <link>//localhost:1313/posts/welcome/</link>
+      <link>/posts/welcome/</link>
       <pubDate>Mon, 23 Sep 2024 16:15:05 -0500</pubDate>
       
-      <guid>//localhost:1313/posts/welcome/</guid>
+      <guid>/posts/welcome/</guid>
       <description>It Begins A journey of a thousand miles starts with a single step, and this site is mine. I’m Glenn Lewis, and I have been working in tech for 10 years. During that time, I’ve become adept at Linux administration, Python scripting, Incident Management, and System Observability. Like most people who haven’t gone through a typical education path, my knowledge had been built through hands-on experience and tribal knowledge.
 What I would like to do with this site is track my continuing journey in software development and share my experience.</description>
       <content>&lt;h1 id=&#34;it-begins&#34;&gt;It Begins&lt;/h1&gt;

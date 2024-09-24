@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Terminal</title>
-    <link>/</link>
-    <description>Recent content on Terminal</description>
+    <title>Kubernetes on Terminal</title>
+    <link>/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Sep 2024 19:44:48 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Sep 2024 19:44:48 -0500</lastBuildDate><atom:link href="/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Certified Kubernetes Administrator: Core Concepts</title>
       <link>/posts/cka_2/</link>
@@ -330,115 +330,6 @@ spec:
 		limits.cpu: &amp;#34;10&amp;#34;
 		limits.memory: 10Gi
 &lt;/code&gt;&lt;/pre&gt;</content>
-    </item>
-    
-    <item>
-      <title>Resume</title>
-      <link>/resume/</link>
-      <pubDate>Mon, 23 Sep 2024 16:28:48 -0500</pubDate>
-      
-      <guid>/resume/</guid>
-      <description>Glenn Lewis | DevOps Engineer 512-216-7591
-Austin, TX 78748
-glelewis90@gmail.com
-LinkedIn | GitHub
-Summary DevOps Engineer with ten years of technical experience in Linux systems administration, network management, and cloud architecture. Holds a certificate in Cybersecurity from the University of Texas’s Bootcamp. I am skilled in automation (SALT Ansible), scripting in Python and Bash, and corporate compliance. Has implemented ground-up infrastructure monitoring at two companies, implemented open-source host management solution via Proxmox, and has deployed and managed CI/CD via Jenkins and Kubernetes.</description>
-      <content>&lt;h1 id=&#34;glenn-lewis--devops-engineer&#34;&gt;Glenn Lewis | DevOps Engineer&lt;/h1&gt;
-&lt;p&gt;512-216-7591&lt;br&gt;
-Austin, TX 78748&lt;br&gt;
-&lt;a href=&#34;mailto:glelewis90@gmail.com&#34;&gt;glelewis90@gmail.com&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.linkedin.com/in/glenn-lewis-9363b458/&#34;&gt;LinkedIn&lt;/a&gt; | &lt;a href=&#34;https://github.com/urfriendglenn&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;DevOps Engineer with ten years of technical experience in Linux systems administration, network management, and cloud architecture. Holds a certificate in Cybersecurity from the University of Texas’s Bootcamp. I am skilled in automation (SALT Ansible), scripting in Python and Bash, and corporate compliance. Has implemented ground-up infrastructure monitoring at two companies, implemented open-source host management solution via Proxmox, and has deployed and managed CI/CD via Jenkins and Kubernetes. My strengths in project management and planning and my expertise in Linux administration make me an excellent addition to any technical team.&lt;/p&gt;
-&lt;h1 id=&#34;skills&#34;&gt;Skills&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Front End&lt;/strong&gt;: HTML, CSS, JavaScript&lt;br&gt;
-&lt;strong&gt;Backend&lt;/strong&gt;: Bash, MongoDB, MySQL, Salt, Ansible, Python, Django, Powershell, Git&lt;br&gt;
-&lt;strong&gt;Cloud&lt;/strong&gt;: AWS, Google Cloud Platform&lt;br&gt;
-&lt;strong&gt;On-Premise&lt;/strong&gt;: VMWare, IPMI, iDRAC, Networking&lt;br&gt;
-&lt;strong&gt;Processes&lt;/strong&gt;: Incident Management, Agile, CI/CD, Project Management, GRC Compliance&lt;/p&gt;
-&lt;h1 id=&#34;projects&#34;&gt;Projects&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/urfriendglenn/ElkStackDeployment&#34;&gt;&lt;strong&gt;Automated ELK Stack Deployment&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: In this project, Ansible was used to automate the deployment of docker containers that served three DVWA Hosts and an ELK stack.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Role&lt;/strong&gt;: Sole Author&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Azure, Ansible, ELK, Beats&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;education&#34;&gt;Education&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;University of Texas, Austin, TX&lt;/strong&gt; - &lt;em&gt;Cybersecurity Bootcamp Certificate&lt;/em&gt; (June 2021-Dec 2021)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Morton Ranch High School, Katy, TX&lt;/strong&gt; - &lt;em&gt;High School Diploma&lt;/em&gt; (2004-2008)&lt;/p&gt;
-&lt;h1 id=&#34;experience&#34;&gt;Experience&lt;/h1&gt;
-&lt;h2 id=&#34;vectra-ai--austin-tx---_devops-engineer-ii_&#34;&gt;Vectra AI | Austin, TX - &lt;em&gt;DevOps Engineer II&lt;/em&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;june-2021---present&#34;&gt;June 2021 - Present&lt;/h3&gt;
-&lt;p&gt;Responsibilities included deploying and maintaining a monitoring system, Zabbix, for the internal corporate infrastructure, which comprises approximately 85% of Vectra’s entire infrastructure.&lt;/p&gt;
-&lt;h4 id=&#34;key-accomplishments&#34;&gt;Key Accomplishments&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Deployed monitoring and eventing for internal infrastructure via Zabbix, ELK, Grafana, and PagerDuty&lt;/li&gt;
-&lt;li&gt;Designed, planned, and deployed Linux systems based on given requirements to both on-premise
-architecture, via VMWare, and cloud, via AWS&lt;/li&gt;
-&lt;li&gt;Deployed and maintained systems through automation via SALT and Ansible&lt;/li&gt;
-&lt;li&gt;Deployed, configured, and maintained self-hosted virtualization via VMWare (ESXi, vSphere, and
-vCenter)&lt;/li&gt;
-&lt;li&gt;Spearheaded and implemented System Architecture version continuity program&lt;/li&gt;
-&lt;li&gt;Executed GRC and Vulnerability related tasks&lt;/li&gt;
-&lt;li&gt;Managed CI/CD Pipeline via Jenkins, Docker, and Kubernetes&lt;/li&gt;
-&lt;li&gt;Designed and deployed microservices via Docker, Podman, and Kubernetes&lt;/li&gt;
-&lt;li&gt;Managed SQL and MongoDB databases&lt;/li&gt;
-&lt;li&gt;Developed and contributed code written in Python&lt;/li&gt;
-&lt;li&gt;Managed data pipeline via ELK and Grafana&lt;/li&gt;
-&lt;li&gt;Deployed, Configured, and Maintained On-Premise Host Management Solution via Proxmox&lt;/li&gt;
-&lt;li&gt;Deployed, Configured, and Maintained Kubernetes Clusters via K3S&lt;/li&gt;
-&lt;li&gt;Designed and Deployed Automated Scans via Tenable, Jenkins, and Kubernetes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;procore-technologies--austin-tx---_senior-information-systems-engineer_&#34;&gt;Procore Technologies | Austin, TX - &lt;em&gt;Senior Information Systems Engineer&lt;/em&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;aug-2019---june-2021&#34;&gt;Aug 2019 - June 2021&lt;/h3&gt;
-&lt;p&gt;As a Senior Information Systems Engineer, my responsibilities included designing and implementing monitoring for Procore’s corporate internal infrastructure. Responsibilities included creating the initial runbooks and standard operating procedures for an integrated operations center.&lt;/p&gt;
-&lt;h4 id=&#34;key-accomplishments-1&#34;&gt;Key Accomplishments&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Promotion from Information Systems Engineer to Senior Information Systems Engineer&lt;/li&gt;
-&lt;li&gt;Lead the procurement and implementation of LogicMonitor&lt;/li&gt;
-&lt;li&gt;Commanded and assisted in over 100 app and security incidents following ITIL standards&lt;/li&gt;
-&lt;li&gt;Led and designed implementation of monitoring and response for Procore’s authorized ecosystem&lt;/li&gt;
-&lt;li&gt;Assisted in the endeavor of the company going public by implementing monitoring for critical
-components and systems&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;q2ebanking--austin-tx---_noc-analyst-ii_&#34;&gt;Q2ebanking | Austin, TX - &lt;em&gt;NOC Analyst II&lt;/em&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;jan-2019---aug-2019&#34;&gt;Jan 2019 - Aug 2019&lt;/h3&gt;
-&lt;p&gt;At Q2ebanking, responsibilities included system support activities, such as network and server monitoring, troubleshooting, escalation, and resolution. Responsibilities also included customer outreach, system upgrades, and initial security response.&lt;/p&gt;
-&lt;h4 id=&#34;key-accomplishments-2&#34;&gt;Key Accomplishments&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Ensured that SLA for event response of 98% was met&lt;/li&gt;
-&lt;li&gt;Worked on rotating shifts between day and night&lt;/li&gt;
-&lt;li&gt;Direct contact with customer escalations&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Welcome</title>
-      <link>/posts/welcome/</link>
-      <pubDate>Mon, 23 Sep 2024 16:15:05 -0500</pubDate>
-      
-      <guid>/posts/welcome/</guid>
-      <description>It Begins A journey of a thousand miles starts with a single step, and this site is mine. I’m Glenn Lewis, and I have been working in tech for 10 years. During that time, I’ve become adept at Linux administration, Python scripting, Incident Management, and System Observability. Like most people who haven’t gone through a typical education path, my knowledge had been built through hands-on experience and tribal knowledge.
-What I would like to do with this site is track my continuing journey in software development and share my experience.</description>
-      <content>&lt;h1 id=&#34;it-begins&#34;&gt;It Begins&lt;/h1&gt;
-&lt;p&gt;A journey of a thousand miles starts with a single step, and this site is mine. I’m Glenn Lewis, and I have been working in tech for 10 years. During that time, I’ve become adept at Linux administration, Python scripting, Incident Management, and System Observability. Like most people who haven’t gone through a typical education path, my knowledge had been built through hands-on experience and tribal knowledge.&lt;/p&gt;
-&lt;p&gt;What I would like to do with this site is track my continuing journey in software development and share my experience. I hope to share resources, pitfalls, and advice that others might find useful. Ellen Ulman once said “Programmers seem to be changing the world. It would be a relief, for them and for all of us, if they knew something about it,” and that is what I intend to do.&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Welcome About Me I am a DevOps Engineer with ten years of technical experience in Linux systems administration, network management, and cloud architecture. I hold a certificate in Cybersecurity from the University of Texas’s Bootcamp. I am skilled in automation (SALT, Ansible), scripting in Python and Bash, and corporate compliance. Has implemented ground-up infrastructure monitoring at two companies, implemented open-source host management solution via Proxmox, and has deployed and managed CI/CD via Jenkins and Kubernetes.</description>
-      <content>&lt;h1 id=&#34;welcome&#34;&gt;Welcome&lt;/h1&gt;
-&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
-&lt;p&gt;I am a DevOps Engineer with ten years of technical experience in Linux systems administration, network management, and cloud architecture. I hold a certificate in Cybersecurity from the University of Texas’s Bootcamp. I am skilled in automation (SALT, Ansible), scripting in Python and Bash, and corporate compliance. Has implemented ground-up infrastructure monitoring at two companies, implemented open-source host management solution via Proxmox, and has deployed and managed CI/CD via Jenkins and Kubernetes. My strengths in project management and planning and my expertise in Linux administration make me an excellent addition to any technical team.&lt;/p&gt;
-&lt;p&gt;I am a writer, reader, guitarist, and runner. I enjoy traveling with my wife and dog.&lt;/p&gt;
-</content>
     </item>
     
   </channel>
