@@ -60,11 +60,11 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "Glenn Lewis"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
-      owner = ""
+      subtitle = "DevOps Enginner"
+      owner = "glewis"
       keywords = ""
       copyright = ""
       menuMore = "Show more"
