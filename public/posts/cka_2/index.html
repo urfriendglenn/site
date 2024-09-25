@@ -6,8 +6,14 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cluster Architecture Control Plane Master Node: Manage, Plan, Schedule, and Monitor Nodes ETCD Cluster: Highly available key/value database kube-scheduler: Identifies the right node to place a container on Node-Controller: Manages nodes Replication-Controller: Ensures desired number of containers are running in a replication group kube-apiserver: Orchestrates all operations within the cluster and exposes the API
-Workers Worker Nodes: Host applications as Containers A container runtime engine, like Docker, must be installed and available on all nodes kubelet: Agent that runs on each node in a cluster and listens for instructions from the API as well as monitors status of all the other nodes kube-proxy: Service ensures that the rules are in place on the worker nodes so the containers can communicate between each other" />
+<meta name="description" content="Cluster Architecture Control Plane Master Node: Manage, Plan, Schedule, and Monitor Nodes
+ETCD Cluster: Highly available key/value database
+kube-scheduler: Identifies the right node to place a container on
+Node-Controller: Manages nodes
+Replication-Controller: Ensures desired number of containers are running in a replication group
+kube-apiserver: Orchestrates all operations within the cluster and exposes the API\
+Workers Worker Nodes: Host applications as Containers
+A container runtime engine, like Docker, must be installed and available on all nodes" />
 <meta name="keywords" content="certifications, kubernetes, concepts" />
 
   <meta name="robots" content="noodp" />
@@ -82,8 +88,14 @@ Workers Worker Nodes: Host applications as Containers A container runtime engine
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Certified Kubernetes Administrator: Core Concepts">
-<meta property="og:description" content="Cluster Architecture Control Plane Master Node: Manage, Plan, Schedule, and Monitor Nodes ETCD Cluster: Highly available key/value database kube-scheduler: Identifies the right node to place a container on Node-Controller: Manages nodes Replication-Controller: Ensures desired number of containers are running in a replication group kube-apiserver: Orchestrates all operations within the cluster and exposes the API
-Workers Worker Nodes: Host applications as Containers A container runtime engine, like Docker, must be installed and available on all nodes kubelet: Agent that runs on each node in a cluster and listens for instructions from the API as well as monitors status of all the other nodes kube-proxy: Service ensures that the rules are in place on the worker nodes so the containers can communicate between each other" />
+<meta property="og:description" content="Cluster Architecture Control Plane Master Node: Manage, Plan, Schedule, and Monitor Nodes
+ETCD Cluster: Highly available key/value database
+kube-scheduler: Identifies the right node to place a container on
+Node-Controller: Manages nodes
+Replication-Controller: Ensures desired number of containers are running in a replication group
+kube-apiserver: Orchestrates all operations within the cluster and exposes the API\
+Workers Worker Nodes: Host applications as Containers
+A container runtime engine, like Docker, must be installed and available on all nodes" />
 <meta property="og:url" content="/posts/cka_2/" />
 <meta property="og:site_name" content="Terminal" />
 
@@ -201,68 +213,68 @@ Workers Worker Nodes: Host applications as Containers A container runtime engine
   <div class="post-content"><div>
         <h1 id="cluster-architecture">Cluster Architecture<a href="#cluster-architecture" class="hanchor" ariaLabel="Anchor">#</a> </h1>
 <h2 id="control-plane">Control Plane<a href="#control-plane" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><strong>Master Node</strong>: Manage, Plan, Schedule, and Monitor Nodes
-<strong>ETCD Cluster</strong>: Highly available key/value database
-<strong>kube-scheduler</strong>: Identifies the right node to place a container on
-<strong>Node-Controller</strong>: Manages nodes
-<strong>Replication-Controller</strong>: Ensures desired number of containers are running in a replication group
-<strong>kube-apiserver</strong>: Orchestrates all operations within the cluster and exposes the API</p>
+<p><strong>Master Node</strong>: Manage, Plan, Schedule, and Monitor Nodes<br>
+<strong>ETCD Cluster</strong>: Highly available key/value database<br>
+<strong>kube-scheduler</strong>: Identifies the right node to place a container on<br>
+<strong>Node-Controller</strong>: Manages nodes<br>
+<strong>Replication-Controller</strong>: Ensures desired number of containers are running in a replication group<br>
+<strong>kube-apiserver</strong>: Orchestrates all operations within the cluster and exposes the API\</p>
 <h2 id="workers">Workers<a href="#workers" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><strong>Worker Nodes</strong>: Host applications as Containers
-A container runtime engine, like Docker, must be installed and available on all nodes
-<strong>kubelet</strong>: Agent that runs on each node in a cluster and listens for instructions from the API as well as monitors status of all the other nodes
-<strong>kube-proxy</strong>: Service ensures that the rules are in place on the worker nodes so the containers can communicate between each other</p>
+<p><strong>Worker Nodes</strong>: Host applications as Containers<br>
+A container runtime engine, like Docker, must be installed and available on all nodes<br>
+<strong>kubelet</strong>: Agent that runs on each node in a cluster and listens for instructions from the API as well as monitors status of all the other node
+<strong>kube-proxy</strong>: Service ensures that the rules are in place on the worker nodes so the containers can communicate between each othe</p>
 <h1 id="docker-vs-containerd">Docker vs. Containerd<a href="#docker-vs-containerd" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Docker support was removed from Kubernetes, but Docker images still work because they adhere to imagespec
-<strong>containerd</strong>: Container runtime used by Docker that can be ran by itself
-<code>ctr</code>: Debugging tool bundled with containerd
-<code>nerdctl</code>: Provides a Docker-like for containerd
-Supports docker compose
-Supports newest features in containerd
-<code>crictl</code>: Provides a CLI for Container Runtime Interface (CRI) compatible container runtimes
-Installed separately
-Used to inspect and debug container runtimes
-Works across different runtimes</p>
+<p>Docker support was removed from Kubernetes, but Docker images still work because they adhere to imagespec<br>
+<strong>containerd</strong>: Container runtime used by Docker that can be ran by itself<br>
+<code>ctr</code>: Debugging tool bundled with containerd<br>
+<code>nerdctl</code>: Provides a Docker-like for containerd<br>
+      Supports docker compose<br>
+      Supports newest features in containerd<br>
+<code>crictl</code>: Provides a CLI for Container Runtime Interface (CRI) compatible container runtimes<br>
+      Installed separately<br>
+      Used to inspect and debug container runtimes<br>
+      Works across different runtimes</p>
 <h1 id="etcd-for-beginners">ETCD for Beginners<a href="#etcd-for-beginners" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>ETCD is a distributed reliable key-value store
-<strong>Key-Value Store</strong>: Stores information as documents and all information on an item is contained in the corresponding document
-To install ETCD, download and extract the binary then run the service
-It will run on port 2379 and clients can be attached
-<code>etcdctl</code>: Command client
-<code>etcdctl put key1 value1</code>: Sets a key
-<code>ectdctl get key1</code>: Gets a key value</p>
+<p>ETCD is a distributed reliable key-value store<br>
+<strong>Key-Value Store</strong>: Stores information as documents and all information on an item is contained in the corresponding document<br>
+To install ETCD, download and extract the binary then run the service<br>
+It will run on port 2379 and clients can be attached<br>
+<code>etcdctl</code>: Command client<br>
+      <code>etcdctl put key1 value1</code>: Sets a key<br>
+      <code>ectdctl get key1</code>: Gets a key value</p>
 <h1 id="etcd-in-kubernetes">ETCD in Kubernetes<a href="#etcd-in-kubernetes" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Stores information on the Nodes, PODs, Configs, Secrets, etc.
-All changes are updated in the ETCD server, and is not considered completed until changed</p>
+<p>Stores information on the Nodes, PODs, Configs, Secrets, etc.<br>
+All changes are updated in the ETCD server, and is not considered completed until changed\</p>
 <h2 id="setup">Setup<a href="#setup" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h3 id="manual">Manual<a href="#manual" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>The binary is downloaded, then manually set as a service by executing the <code>etcd</code> command with the required options</p>
 <h2 id="kubeadm">kubeadm<a href="#kubeadm" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>ETCD is deployed as a pod in the clusted
-<code>kubectl exec etcd-master -n kube-system etcdctl get / --prefic -keys-only</code>: Get keys stored in the ETCD pod</p>
+<p>ETCD is deployed as a pod in the clusted<br>
+<code>kubectl exec etcd-master -n kube-system etcdctl get / --prefic -keys-only</code>: Get keys stored in the ETCD pod\</p>
 <p>In a HA Environment, there are multiple ETCD masters</p>
 <h1 id="kube-api-server">Kube-API Server<a href="#kube-api-server" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>When running a command, it is sent to the kube-apiserver
-POST requests can also be sent in place of commands:
-<code>curl -X POST /api/v1/namespaces/default/pods ...</code>: Creates a Pod
-The scheduler detects there is a pod with no node assigned, then chooses a pod and communicates to the kube-apiserver
-The apiserver instructs the kubelet to create a pod
-The kubelet communicates the change to the apiserver, which updates ETCD</p>
+<p>When running a command, it is sent to the kube-apiserver<br>
+POST requests can also be sent in place of commands:<br>
+<code>curl -X POST /api/v1/namespaces/default/pods ...</code>: Creates a Pod<br>
+      The scheduler detects there is a pod with no node assigned, then chooses a pod and communicates to the kube-apiserver<br>
+      The apiserver instructs the kubelet to create a pod<br>
+      The kubelet communicates the change to the apiserver, which updates ETCD</p>
 <h1 id="kube-controller-manager">Kube Controller Manager<a href="#kube-controller-manager" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>A controller is a process that continuously monitors the system and takes necessary actions to keep the system in a specified state
-<strong>Node Controller</strong>: Responsible for monitoring the status of the nodes and takes action to keep applications running
-Checks status every 5 second
-After 40 seconds of no heartbeat, a node is marked unreachable
-After 5 minutes, the node is evicted and pods are moved to healthy nodes
-<strong>Replication Controller</strong>: Responsible for monitoring the status of replicasets and ensures the number of pods are available within a set
-If a pod dies, it creates another pod
-There are many types of controllers in a Kubernetes Cluster, and are all packaged in the <strong>Kube-Controller-Manager</strong>
-kubeadm deploys the kube-controller-manager as a pod</p>
+<p>A controller is a process that continuously monitors the system and takes necessary actions to keep the system in a specified state<br>
+<strong>Node Controller</strong>: Responsible for monitoring the status of the nodes and takes action to keep applications running<br>
+      Checks status every 5 second<br>
+      After 40 seconds of no heartbeat, a node is marked unreachable<br>
+      After 5 minutes, the node is evicted and pods are moved to healthy nodes<br>
+<strong>Replication Controller</strong>: Responsible for monitoring the status of replicasets and ensures the number of pods are available within a set<br>
+      If a pod dies, it creates another pod<br>
+There are many types of controllers in a Kubernetes Cluster, and are all packaged in the <strong>Kube-Controller-Manager</strong><br>
+kubeadm deploys the kube-controller-manager as a pod\</p>
 <h1 id="kube-scheduler">Kube Scheduler<a href="#kube-scheduler" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Responsible which pod goes on which node
-Does not actually place the pod, the kubelet does
-The scheduler looks at each pod and finds the correct node for it based on requirements (CPU, Memory, Labels, etc.)
-The scheduler ranks the nodes and assigns on a rank from 0-10
+<p>Responsible which pod goes on which node<br>
+Does not actually place the pod, the kubelet does<br>
+The scheduler looks at each pod and finds the correct node for it based on requirements (CPU, Memory, Labels, etc.)<br>
+The scheduler ranks the nodes and assigns on a rank from 0-10<br>
 kubeadm deploys the scheduler as a pod</p>
 <h1 id="kubelet">Kubelet<a href="#kubelet" class="hanchor" ariaLabel="Anchor">#</a> </h1>
 <ul>
@@ -272,20 +284,20 @@ kubeadm deploys the scheduler as a pod</p>
 The kubelet service is not installed by kubeadm and must be manually installed on each node</li>
 </ul>
 <h1 id="kube-proxy">Kube Proxy<a href="#kube-proxy" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Every pod can reach every pod
-A pod network is an internal network each pod communicates with
-Applications are deployed as services so they can be available to the cluster
-The service has an assigned IP
-<strong>kube-proxy</strong>: Process that runs on each that looks for new services, then creates the appropriate rules to route traffic through the pods
+<p>Every pod can reach every pod<br>
+A pod network is an internal network each pod communicates with<br>
+Applications are deployed as services so they can be available to the cluster<br>
+The service has an assigned IP<br>
+<strong>kube-proxy</strong>: Process that runs on each that looks for new services, then creates the appropriate rules to route traffic through the pods<br>
 kubeadm deploys kube-proxy as a pod</p>
 <h1 id="pods">Pods<a href="#pods" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p><strong>Pod</strong>: A single instance of an application and is the smallest object that can be created in Kubernetes
-Containers are not added to existing pods to scale
-Pods can container multiple containers, but the containers are not of the same image
-<code>kubectl run nginx --image nginx</code>: Deploys a docker container by creating a pod using the NGINX Docker Image
+<p><strong>Pod</strong>: A single instance of an application and is the smallest object that can be created in Kubernetes<br>
+Containers are not added to existing pods to scale<br>
+Pods can container multiple containers, but the containers are not of the same image<br>
+<code>kubectl run nginx --image nginx</code>: Deploys a docker container by creating a pod using the NGINX Docker Image<br>
 <code>kubectl get pods</code>: Lists Pods</p>
 <h1 id="pods-with-yaml">Pods with YAML<a href="#pods-with-yaml" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Kubernetes uses YAML files as inputs for creation of objects
+<p>Kubernetes uses YAML files as inputs for creation of objects<br>
 A Kubernetes definition file always contains the following four top-level fields:</p>
 <pre tabindex="0"><code>apiVersion: v1
 kind: Pod
@@ -307,10 +319,10 @@ spec:
 <code>kubectl describe pod myapp-pod</code>: Lists information on the specified pod</li>
 </ul>
 <h1 id="replicasets">ReplicaSets<a href="#replicasets" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p><strong>Replication Controller</strong>: Runs multiple instances of a single Pod in a cluster
-A replication controller also brings up new pods when a pod fails and ensures the necessary number of pods are running
-Replication assists with load balancing and scaling by deploying multiple nodes in the cluster across nodes
-<strong>ReplicaSet</strong>: New recommended utility to manage replication
+<p><strong>Replication Controller</strong>: Runs multiple instances of a single Pod in a cluster<br>
+A replication controller also brings up new pods when a pod fails and ensures the necessary number of pods are running<br>
+Replication assists with load balancing and scaling by deploying multiple nodes in the cluster across nodes<br>
+<strong>ReplicaSet</strong>: New recommended utility to manage replication<br>
 To create a replication controller:
 <code>rc-definition.yml</code>:</p>
 <pre tabindex="0"><code>apiVersion: v1
@@ -332,10 +344,10 @@ spec:
 		- name: nginx-container
 	      image: nginx
 	replicas: 3
-</code></pre><p><code>template</code>: Pod template to be created by the replication controller, which will contain the contents of a Pod YAML file
-<code>kubectl create -f rc-definition.yml</code>: Creates the replication controller
-<code>kubectl get replicationcontroller</code>: Lists replication controller</p>
-<p>To create a replicaset:
+</code></pre><p><code>template</code>: Pod template to be created by the replication controller, which will contain the contents of a Pod YAML file<br>
+<code>kubectl create -f rc-definition.yml</code>: Creates the replication controller<br>
+<code>kubectl get replicationcontroller</code>: Lists replication controller\</p>
+<p>To create a replicaset:<br>
 <code>replicaset-definition.yml</code></p>
 <pre tabindex="0"><code>apiVersion: apps/v1
 kind: ReplicaSet
@@ -359,11 +371,11 @@ spec:
 	selector:
 		matchLabels:
 			type: front-end
-</code></pre><p><code>selector</code>: Identifies applicable pods, as ReplicaSets can manage pods that were not created by it. It is not a required field
-<code>kubectl create -f replicaset-definition.yml</code>: Creates the replicaset
-<code>kubectl get replicaset</code>: Lists replicasets
-ReplicaSets can begin monitoring existing pods upon creation if said pods match the selector criteria
-<code>kubectl delete replicaset myapp-replicaset</code>: Deletes the specified replicaset and the underlying pods</p>
+</code></pre><p><code>selector</code>: Identifies applicable pods, as ReplicaSets can manage pods that were not created by it. It is not a required field<br>
+<code>kubectl create -f replicaset-definition.yml</code>: Creates the replicaset<br>
+<code>kubectl get replicaset</code>: Lists replicasets<br>
+ReplicaSets can begin monitoring existing pods upon creation if said pods match the selector criteria<br>
+<code>kubectl delete replicaset myapp-replicaset</code>: Deletes the specified replicaset and the underlying pods\</p>
 <h2 id="scale">Scale<a href="#scale" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>To scale:</p>
 <ul>
@@ -372,8 +384,8 @@ ReplicaSets can begin monitoring existing pods upon creation if said pods match 
 <li>Use the <code>kubectl scale --replicas=6 replicaset myapp-replicaset</code> command</li>
 </ul>
 <h1 id="deployments">Deployments<a href="#deployments" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p><strong>Rolling Updates</strong>: Updating pods one by one to limit impact to accessibility
-<strong>Deployment</strong>: Object that provides capability to upgrade with rolling updates, as well pause, and resume changes
+<p><strong>Rolling Updates</strong>: Updating pods one by one to limit impact to accessibility<br>
+<strong>Deployment</strong>: Object that provides capability to upgrade with rolling updates, as well pause, and resume changes<br>
 <code>deployment-definition.yml</code>:</p>
 <pre tabindex="0"><code>apiVersion: apps/v1
 kind: Deployment
@@ -397,18 +409,18 @@ spec:
 	selector:
 		matchLabels:
 			type: front-end
-</code></pre><p><code>kubectl create -f deployment-definition.yml</code>: Creates the deployment
-<code>kubectl get deployments</code>: Lists deployments
-<code>kubectl get all</code>: Shows all objects created</p>
+</code></pre><p>      <code>kubectl create -f deployment-definition.yml</code>: Creates the deployment<br>
+      <code>kubectl get deployments</code>: Lists deployments<br>
+      <code>kubectl get all</code>: Shows all objects created</p>
 <h1 id="services-node-port">Services: Node Port<a href="#services-node-port" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Services enable connectivity between groups of pods and external sources
-Services are deployed as an object
-<strong>Node Port Service</strong>: Listens to a port on the node and forward requests to a port running on the application
-<strong>Target Port</strong>: Port on the pod that requests are forwarded to
-<strong>Port</strong>: The port on the service
-<strong>Node Port</strong>: Physical port on the Node that ranges from 30008-32767
-<strong>Cluster IP</strong>: Virtual IP inside the cluster to allow communication between different services
-<strong>LoadBalancer</strong>: Distributes load based on set requirements
+<p>Services enable connectivity between groups of pods and external sources<br>
+Services are deployed as an object<br>
+<strong>Node Port Service</strong>: Listens to a port on the node and forward requests to a port running on the application<br>
+      <strong>Target Port</strong>: Port on the pod that requests are forwarded to<br>
+      <strong>Port</strong>: The port on the service<br>
+      <strong>Node Port</strong>: Physical port on the Node that ranges from 30008-3276<br>
+<strong>Cluster IP</strong>: Virtual IP inside the cluster to allow communication between different services<br>
+<strong>LoadBalancer</strong>: Distributes load based on set requirements<br>
 <code>service-definition.yml</code>:</p>
 <pre tabindex="0"><code>apiVersion: v1
 kind: Service
@@ -424,12 +436,12 @@ spec:
 	selector:
 		app: myapp
 		type: front-end
-</code></pre><p><code>selector</code>: Selects the applicable pods based on labels
-The service will be applied to all pods with the label <code>app: myapp</code>
+</code></pre><p><code>selector</code>: Selects the applicable pods based on labels<br>
+      The service will be applied to all pods with the label <code>app: myapp</code><br>
 <code>kubectl get services</code>: Lists services</p>
 <h1 id="services-cluster-ip">Services: Cluster IP<a href="#services-cluster-ip" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Pods are assigned non-static IP addresses when created
-A service can group like pods together and provide a single interface for access purposes
+<p>Pods are assigned non-static IP addresses when created<br>
+A service can group like pods together and provide a single interface for access purposes<br>
 <code>service-definition.yml</code>:</p>
 <pre tabindex="0"><code>apiVersion: v1
 kind: Service
@@ -445,7 +457,7 @@ spec:
 		app: myapp
 		type: back-end
 </code></pre><h1 id="services-loadbalancer">Services: LoadBalancer<a href="#services-loadbalancer" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Kubernetes supports integration with cloud provider LoadBalancers
+<p>Kubernetes supports integration with cloud provider LoadBalancers<br>
 Uses the same format as <code>NodePort</code> YAML files, except type is set to <code>LoadBalancer</code>:</p>
 <pre tabindex="0"><code>apiVersion: v1
 kind: Service
@@ -462,21 +474,21 @@ spec:
 		app: myapp
 		type: front-end
 </code></pre><h1 id="namespaces">Namespaces<a href="#namespaces" class="hanchor" ariaLabel="Anchor">#</a> </h1>
-<p>Objects are created in the <code>default</code> namespace that was made available during the creation of the cluster
-Another namespace called <code>kubesystem</code> was also created for internal services
-A third namespace, <code>kubepublic</code>, was created in which resources meant to made public to users are held
-Resources can be isolated in namespaces, i.e. Development vs. Production
-Resources within the same namespace can reach other by the object name:
-<code>mysql.connect(&quot;db-service)</code>
-To reach a service within another namespace, the name of the namespace needs to be appended to the service:
-<code>mysql.connect(&quot;db-service.dev.svc.cluster.local&quot;)</code>
-When the service was created, a DNS entry was created in this format:
-<code>db-service</code>: Sevice Name
-<code>dev</code>: Namespace
-<code>svc</code>: Service
-<code>cluster.local</code>: Domain
-<code>kubectl get pods -n [namespace]</code>: List pods in a specified namespace
-<code>kubectle create -f definition.yml --namespace=[namespace]</code>: Creates the object in the specified namespace
+<p>Objects are created in the <code>default</code> namespace that was made available during the creation of the cluster<br>
+Another namespace called <code>kubesystem</code> was also created for internal services<br>
+A third namespace, <code>kubepublic</code>, was created in which resources meant to made public to users are held<br>
+Resources can be isolated in namespaces, i.e. Development vs. Production<br>
+Resources within the same namespace can reach other by the object name:<br>
+<code>mysql.connect(&quot;db-service)</code><br>
+To reach a service within another namespace, the name of the namespace needs to be appended to the service:<br>
+<code>mysql.connect(&quot;db-service.dev.svc.cluster.local&quot;)</code><br>
+      When the service was created, a DNS entry was created in this format:<br>
+      <code>db-service</code>: Sevice Name<br>
+      <code>dev</code>: Namespace<br>
+      <code>svc</code>: Service<br>
+      <code>cluster.local</code>: Domain<br>
+<code>kubectl get pods -n [namespace]</code>: List pods in a specified namespace<br>
+<code>kubectle create -f definition.yml --namespace=[namespace]</code>: Creates the object in the specified namespace<br>
 The namespace can be applied in the <code>metadata</code> section of a definition YAML file:</p>
 <pre tabindex="0"><code>apiVersion: v1
 kind: Pod
@@ -490,16 +502,16 @@ spe
 	containers:
 		- name: nginx-container
 		- image: nginx
-</code></pre><p>To create a new namespace:
+</code></pre><p>To create a new namespace:<br>
 <code>namespace-dev.yml</code>:</p>
 <pre tabindex="0"><code>apiVersion: v1
 kind: Namespace
 metadata:
 	name: dev
-</code></pre><p>A namespace can also be created with <code>kubectl create namespace dev</code>
-To set the default namespace <code>kubectl</code> reads from:</p>
+</code></pre><p>A namespace can also be created with <code>kubectl create namespace dev</code><br>
+To set the default namespace <code>kubectl</code> reads from:\</p>
 <pre tabindex="0"><code>kubectl config set-context $(kubectl config current-context) --namespace=namespace
-</code></pre><p>To limit resources in a namespace, create a Resource Quota:
+</code></pre><p>To limit resources in a namespace, create a Resource Quota:<br>
 <code>compute-quota.yml</code>:</p>
 <pre tabindex="0"><code>apiVersion: v1
 kind: ResourceQuota
@@ -513,7 +525,39 @@ spec:
 		requests.memory: 5Gi
 		limits.cpu: &#34;10&#34;
 		limits.memory: 10Gi
-</code></pre>
+</code></pre><h1 id="imperative-vs-declarative">Imperative vs. Declarative<a href="#imperative-vs-declarative" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p><strong>Imperative</strong>: A set of instructions written step by step<br>
+      Using the <code>kubectl</code> command for each step in order to deploy an object<br>
+<strong>Declarative</strong>: Requirements are declared and the system orchestrates the implementation process<br>
+      Using a YAML file to deploy an object</p>
+<h2 id="imperative">Imperative<a href="#imperative" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="create-objects">Create Objects<a href="#create-objects" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><code>kubectl run --image=nginx nginx</code><br>
+<code>kubectl create deployment --image=nginx nginx</code><br>
+<code>kubectl expose deployment nginx --port 80</code><br>
+<code>kubectl create deployment --image=nginx nginx --dry-run=client -o yaml</code><br>
+      <code>--dry-run=client</code>: Will not create the object and will just return with the status of the deployment<br>
+      <code>-o yaml</code>: Output the resource definition in YAML format<br>
+<code>kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service</code>: Create a Service named nginx of type NodePort to expose pod nginx&rsquo;s port 80 on port 30080 on the nodes</p>
+<h3 id="update-objects">Update Objects<a href="#update-objects" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><code>kubectl edit deployment nginx</code><br>
+<code>kubectl scale deployment nginx --replicas=5</code><br>
+<code>kubectl set image deployment nginx nginx=nginx:1.8</code><br>
+<code>kubectl edit deployment nginx</code>: Will edit the <code>pod-definition</code> file in the Kubernetes Memory, which is separate from the YAML used to deploy the pod<br>
+<code>kubectl replace -f nginx.yaml</code>: Will replace the object with the object defined in the file<br>
+      <code>--force</code>: Will force the change</p>
+<h2 id="declarative">Declarative<a href="#declarative" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="create-objects-1">Create Objects<a href="#create-objects-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><code>kubectl apply -f nginx.yaml</code><br>
+<code>kubectl apply -f /path/to/config-files</code>: Will apply all of the files in the directory\</p>
+<h3 id="update-objects-1">Update Objects<a href="#update-objects-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><code>kubectl apply -f nginx.yaml</code>: Will update the object\</p>
+<h1 id="kubectl-apply-command"><code>kubectl apply</code> Command<a href="#kubectl-apply-command" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<p>When the apply command is run, the object is created if it does not already exist<br>
+A <strong>Live Object Configuration</strong> file is created within the cluster, which includes extra values used for maintaining state<br>
+The YAML is converted in JSON format and stored as the <strong>Last Applied Configuration</strong><br>
+      This JSON is stored in the <code>annotations</code> value in the Live Object Configuration file</p>
+
       </div></div>
 
   
