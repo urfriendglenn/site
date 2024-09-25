@@ -6,7 +6,40 @@
     <description>Recent content in Cka on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Sep 2024 19:44:48 -0500</lastBuildDate><atom:link href="/tags/cka/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Sep 2024 21:51:21 -0500</lastBuildDate><atom:link href="/tags/cka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certified Kubernetes Administrator: Scheduling</title>
+      <link>/posts/cka_3/</link>
+      <pubDate>Tue, 24 Sep 2024 21:51:21 -0500</pubDate>
+      
+      <guid>/posts/cka_3/</guid>
+      <description>Manual Scheduling How Scheduling Works Every pod has a field called nodeName that is blank by default
+The scheduler looks through all pods and searches for pods without this field set
+Those pods are candidates for being scheduled
+It then assigns the pod to the node based on the scheduling algorithm
+It then assigns the node by setting the value to the nodeName field
+Nodes can be assigned statically in the definition file as well</description>
+      <content>&lt;h1 id=&#34;manual-scheduling&#34;&gt;Manual Scheduling&lt;/h1&gt;
+&lt;h2 id=&#34;how-scheduling-works&#34;&gt;How Scheduling Works&lt;/h2&gt;
+&lt;p&gt;Every pod has a field called &lt;code&gt;nodeName&lt;/code&gt; that is blank by default&lt;br&gt;
+The scheduler looks through all pods and searches for pods without this field set&lt;br&gt;
+Those pods are candidates for being scheduled&lt;br&gt;
+It then assigns the pod to the node based on the scheduling algorithm&lt;br&gt;
+It then assigns the node by setting the value to the &lt;code&gt;nodeName&lt;/code&gt; field&lt;br&gt;
+Nodes can be assigned statically in the definition file as well&lt;br&gt;
+Kubernetes will not allow the value change of the &lt;code&gt;nodeName&lt;/code&gt; field to an existing pod, so a binding object must be created then posted to the node&amp;rsquo;s binding API:&lt;br&gt;
+&lt;code&gt;pod-bind-definition.yaml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apiVersion: v1
+kind: Binding
+metadata:
+	name: nginx
+target:
+	apiVersion: v1
+	kind: Node
+	name:
+&lt;/code&gt;&lt;/pre&gt;</content>
+    </item>
+    
     <item>
       <title>Certified Kubernetes Administrator: Core Concepts</title>
       <link>/posts/cka_2/</link>
